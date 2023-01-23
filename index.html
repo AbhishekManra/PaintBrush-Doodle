@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6d35b836be.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Paint-App</title>
+</head>
+<body>
+    <div class="app">
+        <div class="controls">
+            <div class="title">Sketch</div>
+            <div class="type">
+                <input type="radio" name="pen-type" id="pen-pencil">
+                <label for="pen-pencil">
+                    <i class="fa-solid fa-pencil"></i>
+                </label>
+                <input type="radio" name="pen-type" id="pen-brush">
+                <label for="pen-brush">
+                    <i class="fa-solid fa-paintbrush"></i>
+                </label>
+            </div>
+            <div class="size">
+                <label for="pen-size">Size</label>
+                <input type="range" id="pen-size" min="1" max="50">
+            </div>
+            <div class="color">
+                <label for="pen-color">Color</label>
+                <input type="color" id="pen-color" value="#000">
+            </div>
+            <div class="actions">
+                <button id="reset-canvas" onclick="window.location.reload()">Reset</button>
+                <button id="save-canvas" onclick="capture()" >Save</button>
+            </div>
+        </div>
+        <div id="canvas-wrapper"></div>
+    </div>
+    <script src="sketch.js" charset="UTF-8"></script>
+</body>
+</html>
